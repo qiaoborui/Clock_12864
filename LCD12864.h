@@ -35,4 +35,5 @@ void Display_FH(uchar screen,uchar page,uchar column,uchar number);
 void LCD_ShowNum(uchar Line,uchar Column,uint Number,uchar Length);
 void LCD_ShowString(uchar Line,uchar Column,char *String);
 void LCD_ShowHZ(uchar Line,uchar Column,uchar HZ);
+void LCD_ShowZMS(uchar Line,uchar Column,char *String);
 #endif

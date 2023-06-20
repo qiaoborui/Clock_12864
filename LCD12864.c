@@ -629,3 +629,11 @@ void LCD_ShowString(uchar Line,uchar Column,char *String){
 void LCD_ShowHZ(uchar Line,uchar Column,uchar HZ){
 	Display_HZ(Column > 8 ? 1 : 2, (Line-1)*2, Column > 8 ? (Column-9)*8 : (Column-1)*8, Hzk[HZ]);
 }
+void LCD_ShowZMS(uchar Line,uchar Column,char *String){
+	int i;
+	for (i = 0; String[i] != '\0'; i++)
+	{
+		Display_ZM(Column > 8 ? 1 : 2, (Line-1)*2, Column > 8 ? (Column-9)*8 : (Column-1)*8, String[i]-'A');
+		Column += 1;
+	}
+}
